@@ -1,0 +1,15 @@
+{
+  "name": "pcces",
+  "version": "0.7.0",
+  "description": "讀、查、改 PCCES 4.3 預算書：電子標單 XML 與本機 PCCES 資料庫（唯讀），改數量單價另存 XML 交給 PCCES 匯入",
+  "author": {
+    "name": "SodaCK87"
+  },
+  "repository": "https://github.com/SodaCK87/pcces-plugin",
+  "keywords": [
+    "PCCES",
+    "預算書",
+    "電子標單",
+    "公共工程"
+  ]
+}

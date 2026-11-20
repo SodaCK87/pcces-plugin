@@ -1,0 +1,2 @@
+# 內附 Python 與套件照原樣存，不讓 git 換行尾；.bat 由建置腳本寫成 CRLF
+* -text

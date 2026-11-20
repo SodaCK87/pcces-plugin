@@ -1,0 +1,16 @@
+{
+  "name": "pcces-plugin",
+  "owner": {
+    "name": "SodaCK87"
+  },
+  "metadata": {
+    "description": "PCCES 預算書的 Claude Code plugin"
+  },
+  "plugins": [
+    {
+      "name": "pcces",
+      "source": "./plugins/pcces",
+      "description": "讀、查、改 PCCES 4.3 預算書：電子標單 XML 與本機 PCCES 資料庫（唯讀），改數量單價另存 XML 交給 PCCES 匯入"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "pcces": {
+      "type": "stdio",
+      "command": "${CLAUDE_PLUGIN_ROOT}/python/python.exe",
+      "args": [
+        "-I",
+        "-X",
+        "utf8",
+        "-m",
+        "pcx_mcp.server"
+      ],
+      "env": {
+        "PYTHONUTF8": "1"
+      }
+    }
+  }
+}
