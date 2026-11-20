@@ -43,6 +43,6 @@
 3. 產出的 XML 會標明是這個工具做的；PCCES 匯入時會提醒「非 PCCES 製作」，按確定就好。
 4. 你請 Claude 直接操作 PCCES 視窗（例如幫你匯出）時，它會先問過你：操作期間會接管滑鼠和鍵盤。
 
-## 內附的程式
+## 授權與內附的程式
 
-外掛裡附了一份 python.org 官方的可攜版 Python 3.13 與執行需要的套件，各自的授權檔留在原位：Python 的在 `plugins\pcces\python\LICENSE.txt`，各套件的在 `plugins\pcces\python\Lib\site-packages\` 底下各自的 `.dist-info` 資料夾。
+本外掛的程式以 MIT 授權釋出（見 `LICENSE`）。外掛裡附了一份 python.org 官方的可攜版 Python 3.13 與執行需要的套件，各自的授權檔留在原位：Python 的在 `plugins\pcces\python\LICENSE.txt`，各套件的在 `plugins\pcces\python\Lib\site-packages\` 底下各自的 `.dist-info` 資料夾。
