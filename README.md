@@ -5,7 +5,7 @@
 ## 需要什麼
 
 1. Windows 10 或 11（64 位元），已經裝好並登入的 Claude Code。
-2. 不需要系統管理員權限，也不必另外裝 Python。
+2. Git for Windows（Claude Code 用它下載外掛；沒裝的話 `安裝.bat` 會提示）。安裝本外掛不需要系統管理員權限，也不必另外裝 Python。
 3. 想直接讀這台 PCCES 裡的預算書（不必先匯出），這台要裝 PCCES 4.3；連資料庫用的驅動會自動挑，不用另外安裝。
 4. 沒裝 PCCES 也能用：PCCES 匯出的預算書 XML（檔名結尾 `_ap_bdgt.xml`）一樣能讀、能查、能改。
 
@@ -18,11 +18,11 @@
 雙擊後出現 `Claude Code (claude.exe) was not found`：改在 Claude Code 的對話框一行一行輸入下面兩行，再重開 Claude Code。
 
 ```text
-/plugin marketplace add SodaCK87/pcces-plugin
+/plugin marketplace add https://github.com/SodaCK87/pcces-plugin.git
 /plugin install pcces@pcces-plugin
 ```
 
-安裝時出現跟 git 有關的錯誤：先裝 Git for Windows（git-scm.com），再雙擊一次 `安裝.bat`。
+雙擊後出現 `Git for Windows was not found`：Claude Code 下載外掛要靠 Git，照視窗裡的網址裝好 Git for Windows（選項照預設），再雙擊一次 `安裝.bat`。
 
 ## 更新
 
