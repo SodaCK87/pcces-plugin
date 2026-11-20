@@ -1,0 +1,8 @@
+RecalcHost.exe 建置紀錄：tools\recalc_host\build_host.py 產生，同一份原始碼與 csc 重編逐位元組相同
+source_sha256	699958bf6cb6b8c21791ee15a9a9f5916495e8b51fb09a6d219ac787c3ea7dca
+exe_sha256	016f604f111c9ca4377d11786686d50a1798111d875aabf69bc582edf3798e7d
+csc	C:\Windows\Microsoft.NET\Framework\v3.5\csc.exe	Microsoft (R) Visual C# 2008 Compiler version 3.5.30729.9151
+args	/nologo /noconfig /platform:x86 /target:exe /optimize+ /debug- /codepage:65001 /warn:4 /out:RecalcHost.exe /r:<PCCES>\Archnowledge.Pcces.DomainModule.BusinessLogical.dll /r:<PCCES>\CommomClass.dll /r:<PCCES>\Archnowledge.Common.dll /r:<PCCES>\Archnowledge.Pcces.DomainModule.General.dll /r:<PCCES>\Archnowledge.Pcces.DomainModule.Budget.dll /r:<PCCES>\Archnowledge.Pcces.DomainModule.LogicalBase.dll /r:<PCCES>\Archnowledge.WebCore.SystemBase.dll /r:<PCCES>\Archnowledge.Pcces.DatabaseAccess.dll /r:System.dll /r:System.Data.dll /r:System.Configuration.dll RecalcHost.cs
+<PCCES>	C:\Program Files (x86)\PccesWin4.3
+normalize	PE TimeDateStamp 與 MVID 換成 sha256(原始碼＋參數) 導出的值
+warnings	

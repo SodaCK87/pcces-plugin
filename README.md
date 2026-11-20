@@ -1,6 +1,6 @@
 # PCCES 預算書外掛（Claude Code）
 
-讓 Claude Code 幫你讀、查、改 PCCES 4.3 的預算書：看章節與總價、找工項、查鋼筋混凝土這類工料總共用多少、看單價分析的組成，或把數量單價改好另存一份 XML，再交給 PCCES 匯入。
+讓 Claude Code 幫你讀、查、改 PCCES 4.3 的預算書：看章節與總價、找工項、查鋼筋混凝土這類工料總共用多少、看單價分析的組成，或把數量單價改好另存一份 XML，再交給 PCCES 匯入；匯入後也可以請它幫你「重新總計」。
 
 ## 需要什麼
 
@@ -33,16 +33,16 @@
 1. 在 PCCES 匯出預算書：「檔案 → 製作電子檔及列印報表」，選「預算書」，勾「工程會電子標單檔 xml 格式」，存到找得到的資料夾。
 2. 把檔案路徑貼給 Claude，請它讀整份、找某個工項、算某種工料總量，或改數量單價。
 3. 改好的檔另存在原檔同一個資料夾，檔名像 `ArchEx001_edit_20261120_01.xml`，原檔不動。
-4. 回到 PCCES：「專案建立‧轉入 → XML 電子檔轉入」匯入新檔，開預算書按「重新總計」，公式項與資源統計這時才會更新。
+4. 回到 PCCES：「專案建立‧轉入 → XML 電子檔轉入」匯入新檔，然後重新總計，公式項與資源統計這時才會更新。可以自己開預算書按「重新總計」；或把 PCCES 整個關掉，請 Claude 幫你重新總計（它會先跟你確認是哪一本）。
 5. 要送出去的版本，在 PCCES 做自主檢查、再製作電子檔。
 
 ## 它會做、不會做
 
-1. 只讀 PCCES 的資料庫，不會改裡面任何東西；要改一律產生新的 XML，由 PCCES 自己匯入。
+1. PCCES 的資料庫只讀；要改數量單價一律產生新的 XML，由 PCCES 自己匯入。唯一會寫資料庫的是「重新總計」：它叫 PCCES 自己的程式重算那一本，等於你在 PCCES 畫面上按「重新總計」。PCCES 開著、或 PCCES 版本跟驗證過的不同時，它不會動手，會告訴你怎麼做。
 2. 不覆蓋你的原檔。
 3. 產出的 XML 會標明是這個工具做的；PCCES 匯入時會提醒「非 PCCES 製作」，按確定就好。
 4. 你請 Claude 直接操作 PCCES 視窗（例如幫你匯出）時，它會先問過你：操作期間會接管滑鼠和鍵盤。
 
 ## 授權與內附的程式
 
-本外掛的程式以 MIT 授權釋出（見 `LICENSE`）。外掛裡附了一份 python.org 官方的可攜版 Python 3.13 與執行需要的套件，各自的授權檔留在原位：Python 的在 `plugins\pcces\python\LICENSE.txt`，各套件的在 `plugins\pcces\python\Lib\site-packages\` 底下各自的 `.dist-info` 資料夾。
+本外掛的程式以 MIT 授權釋出（見 `LICENSE`）。`plugins\pcces\recalc_host\` 是重新總計用的 32 位元小程式，原始碼 `RecalcHost.cs` 與怎麼編的紀錄 `BUILD.txt` 在同一個資料夾，同一份原始碼重編逐位元組相同。外掛裡附了一份 python.org 官方的可攜版 Python 3.13 與執行需要的套件，各自的授權檔留在原位：Python 的在 `plugins\pcces\python\LICENSE.txt`，各套件的在 `plugins\pcces\python\Lib\site-packages\` 底下各自的 `.dist-info` 資料夾。
