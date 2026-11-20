@@ -2,31 +2,36 @@
 
 讓 Claude Code 幫你讀、查、改 PCCES 4.3 的預算書：看章節與總價、找工項、查鋼筋混凝土這類工料總共用多少、看單價分析的組成，或把數量單價改好另存一份 XML，再交給 PCCES 匯入；匯入後也可以請它幫你「重新總計」。
 
-## 需要什麼
-
-1. Windows 10 或 11（64 位元），已經裝好並登入的 Claude Code。
-2. Git for Windows（Claude Code 用它下載外掛；沒裝的話 `安裝.bat` 會提示）。安裝本外掛不需要系統管理員權限，也不必另外裝 Python。
-3. 想直接讀這台 PCCES 裡的預算書（不必先匯出），這台要裝 PCCES 4.3；連資料庫用的驅動會自動挑，不用另外安裝。
-4. 沒裝 PCCES 也能用：PCCES 匯出的預算書 XML（檔名結尾 `_ap_bdgt.xml`）一樣能讀、能查、能改。
-
+<!-- 安裝說明：開始（build_install_guide.py 產生，別手改） -->
 ## 安裝
 
-1. 下載這裡的 `安裝.bat`，雙擊執行。
-2. 視窗最後出現 `Done.`，把 Claude Code 關掉重開。
-3. 在 Claude Code 問「幫我讀這份預算書：C:\…\(預算書)…_ap_bdgt.xml」，它開始用 PCCES 工具就是裝好了。
+需要：
+1. Windows 10 或 11（64 位元），已經裝好 Claude Code 並登入過。
+2. Git for Windows：Claude Code 用它下載外掛，沒裝的話「安裝.bat」會告訴你怎麼裝。
+3. 要直接讀這台 PCCES 裡的預算書，這台要裝 PCCES 4.3；沒裝 PCCES 也能讀、查、改 PCCES 匯出的預算書 XML。
+4. 不需要系統管理員權限，也不用另外裝 Python。
 
-雙擊後出現 `Claude Code (claude.exe) was not found`：改在 Claude Code 的對話框一行一行輸入下面兩行，再重開 Claude Code。
+步驟（做一次就好）：
+1. 用瀏覽器打開 <https://github.com/SodaCK87/pcces-plugin>，在檔案清單裡點「安裝.bat」。
+2. 找到右上角的「Raw」，按它右邊第二個、向下箭頭的按鈕（下載），存到「下載」資料夾。瀏覽器如果提醒這個檔案可能有害，選「保留」。
+3. 到「下載」資料夾雙擊「安裝.bat」。如果跳出「Windows 已保護您的電腦」，先按「其他資訊」，再按「仍要執行」。
+4. 黑色視窗最後出現「Done.」，按任一鍵關掉視窗。
+5. 把 Claude Code 整個關掉，再重新打開。
+6. 對 Claude 說「幫我讀這份預算書：」，後面貼上 PCCES 匯出的 XML 檔路徑（檔名結尾是 _ap_bdgt.xml）。它開始用 PCCES 工具回答，就是裝好了。
 
-```text
-/plugin marketplace add https://github.com/SodaCK87/pcces-plugin.git
-/plugin install pcces@pcces-plugin
-```
+視窗出現下面的字時：
 
-雙擊後出現 `Git for Windows was not found`：Claude Code 下載外掛要靠 Git，照視窗裡的網址裝好 Git for Windows（選項照預設），再雙擊一次 `安裝.bat`。
+| 視窗出現的字 | 意思 | 怎麼辦 |
+| --- | --- | --- |
+| `Claude Code (claude.exe) was not found` | 這台找不到 Claude Code | 打開 Claude Code，在對話框一行一行輸入下面兩行，再重開 Claude Code：<br>`/plugin marketplace add https://github.com/SodaCK87/pcces-plugin.git`<br>`/plugin install pcces@pcces-plugin` |
+| `Git for Windows was not found` | 這台沒有 Git，Claude Code 要用它下載外掛 | 到 <https://git-scm.com/download/win> 下載安裝，選項全部照預設，裝完再雙擊一次「安裝.bat」。 |
+| `Install did not finish` | 安裝中途失敗 | 把整個黑色視窗截圖，傳給提供這個工具的人。 |
 
 ## 更新
 
-雙擊 `更新.bat`，出現 `Done.` 後重開 Claude Code。它會先更新外掛清單、再更新外掛本身，兩步都跑完才會換到新版。
+1. 照安裝步驟第 1、2 步下載「更新.bat」（同一個檔案清單裡），雙擊執行。
+2. 出現「Done.」後，把 Claude Code 關掉再重開，就換成新版了。
+<!-- 安裝說明：結束 -->
 
 ## 怎麼用
 
