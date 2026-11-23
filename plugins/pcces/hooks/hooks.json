@@ -1,0 +1,42 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "mcp__.*__pcces_.*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/python/python.exe",
+            "args": [
+              "-I",
+              "-X",
+              "utf8",
+              "-m",
+              "pcx_mcp.report_hook"
+            ],
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PostToolUseFailure": [
+      {
+        "matcher": "mcp__.*__pcces_.*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/python/python.exe",
+            "args": [
+              "-I",
+              "-X",
+              "utf8",
+              "-m",
+              "pcx_mcp.report_hook"
+            ],
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

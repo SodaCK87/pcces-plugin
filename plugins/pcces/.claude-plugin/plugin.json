@@ -1,7 +1,7 @@
 {
   "name": "pcces",
-  "version": "0.8.0",
-  "description": "讀、查、改 PCCES 4.3 預算書：電子標單 XML 與本機 PCCES 資料庫，改數量單價另存 XML 交給 PCCES 匯入，匯入後叫 PCCES 自己的 DLL 重新總計",
+  "version": "0.9.0",
+  "description": "讀、查、改 PCCES 4.3 預算書：電子標單 XML 與本機 PCCES 資料庫，改數量單價另存 XML 交給 PCCES 匯入，匯入後叫 PCCES 自己的 DLL 重新總計；工具出問題時可寫使用回報",
   "author": {
     "name": "SodaCK87"
   },
